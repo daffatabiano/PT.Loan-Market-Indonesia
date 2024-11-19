@@ -1,9 +1,10 @@
+import { Outlet, useRoutes } from 'react-router-dom';
+import { routeLists } from './routes/routeLists';
+
 function App() {
-  return (
-    <>
-    <h1>Hwllo World</h1>
-    </>
-  )
+  const elements = useRoutes(routeLists);
+
+  return elements || <Outlet />;
 }
 
-export default App
+export default App;

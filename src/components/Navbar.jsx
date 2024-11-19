@@ -10,7 +10,7 @@ export default function Navbar() {
   const [bellOpen, setBellOpen] = useState(false);
 
   return (
-    <nav className="bg-white p-4 h-16 flex justify-between items-center shadow-md">
+    <nav className="bg-white fixed top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
       <h1 className="text-[#4F5051] text-2xl font-thin ">Dashboard</h1>
       <div className="flex items-center gap-2">
         <div>

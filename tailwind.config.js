@@ -6,6 +6,10 @@ export const content = [
   flowbite.content(),
 ];
 export const theme = {
-  extend: {},
+  extend: {
+    colors: {
+      primary: '#17A9E2',
+    },
+  },
 };
 export const plugins = [flowbite.content()];

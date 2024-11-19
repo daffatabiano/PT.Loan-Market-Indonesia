@@ -10,7 +10,7 @@ export default function Navbar() {
   const [bellOpen, setBellOpen] = useState(false);
 
   return (
-    <nav className="bg-white fixed top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
+    <nav className="bg-white border-b-2 ps-[22%] border-slate-500 fixed top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
       <h1 className="text-[#4F5051] text-2xl font-thin ">Dashboard</h1>
       <div className="flex items-center gap-2">
         <div>
@@ -42,7 +42,11 @@ export default function Navbar() {
 export function Header() {
   return (
     <header className="flex p-8 sticky top-0 left-0 right-0 w-full items-center gap-4 justify-start">
-      <img src={ProfilePicture} alt="profile" />
+      <img
+        src={ProfilePicture}
+        alt="profile"
+        className="w-24 h-24 rounded-full"
+      />
       <div>
         <h1>Yohannes Affandy</h1>
         <div className="flex gap-4">
@@ -68,9 +72,7 @@ function InformationsField(prop) {
   const { icon, text } = prop;
   return (
     <p className="flex items-center text-black">
-      <span className="p-2 rounded-full bg-[#E2F0FF] text-[#17A9E2]">
-        {icon}
-      </span>
+      <span className="p-2 rounded-full bg-[#E2F0FF] text-primary">{icon}</span>
       {text}
     </p>
   );

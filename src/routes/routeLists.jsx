@@ -1,4 +1,4 @@
-import Dashboard from '../views/Dashboard';
+import Dashboard from '../pages/Dashboard';
 
 export const routeLists = [
   {

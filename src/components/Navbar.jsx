@@ -10,22 +10,23 @@ export default function Navbar() {
   const [bellOpen, setBellOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b-2 ps-[22%] border-slate-500 fixed top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
-      <h1 className="text-[#4F5051] text-2xl font-thin ">Dashboard</h1>
-      <div className="flex items-center gap-2">
-        <div>
+    <nav className="w-full">
+      <div className="bg-sidebar border-b-2 ps-[22%] border-slate-800 sticky top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
+        <h1 className="text-[#4F5051] text-2xl w-fit font-thin ">Dashboard</h1>
+        <div className="flex items-center gap-2">
           <Popover
             aria-labelledby="simple-popover"
             open={bellOpen}
             onOpenChange={setBellOpen}
+            className="flex items-center gap-2 bg-transparent text-xl text-black hover:bg-transparent focus:bg-transparent hover:border-0"
             content={
               <div className="w-full flex place-items-center">
-                <h1 className="text-md font-thin text-slate-400">
+                <h1 className="text-sm text-center font-thin text-slate-400 w-32 h-44 bg-white flex place-items-center dropshadow-md p-2">
                   This is Notifications example ui
                 </h1>
               </div>
             }>
-            <Button>
+            <Button className="bg-transparent hover:bg-none text-black">
               <CiBellOn />
               <IoChevronDown />
             </Button>

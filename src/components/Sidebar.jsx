@@ -1,44 +1,53 @@
+import { useLocation } from 'react-router-dom';
 import { CompanyLogo } from '../assets';
 import { sidebarItems } from '../datas/sidebar-datas';
-import { Sidebar as FlowbiteSideBar } from 'flowbite-react';
+import { Sidebar } from 'flowbite-react';
 
-export default function Sidebar() {
-  const currentPath = window.location.pathname;
+export default function SidebarCustom() {
+  const currentPath = useLocation().pathname;
 
   return (
-    <aside className="h-screen fixed bg-white w-1/5 flex flex-col border-e-4 border-slate-500">
+    <aside className="h-screen fixed z-50 bg-sidebar w-1/5 flex flex-col border-e-4 border-slate-500">
       <img src={CompanyLogo} alt="company-logo" className="w-24 h-24 mx-auto" />
-      <FlowbiteSideBar className="pt-6 flex flex-col gap-2 w-full">
-        {sidebarItems.map((item) => {
-          if (item.additional) {
-            return (
-              <FlowbiteSideBar.Collapse key={item.name} label={item.name}>
-                {item.additional.map((additional) => (
-                  <FlowbiteSideBar.Item
-                    className={`${
-                      currentPath === additional.path && 'bg-primary'
-                    } p-2 hover:bg-primary rounded-xl`}
-                    key={additional.name}
-                    href={additional.path}>
-                    {additional.name}
-                  </FlowbiteSideBar.Item>
-                ))}
-              </FlowbiteSideBar.Collapse>
-            );
-          }
-          return (
-            <Sidebar.Item
-              className={`p-2 ${
-                currentPath === item.path && 'bg-primary'
-              } hover:bg-primary rounded-lg`}
-              key={item.name}
-              icon={item.icon}
-              text={item.text}
-              path={item.path}
-            />
-          );
-        })}
-      </FlowbiteSideBar>
+      <Sidebar aria-label="Sidebar with multi-level dropdown example">
+        <Sidebar.Items>
+          <Sidebar.ItemGroup>
+            {sidebarItems?.map((item) => {
+              if (item?.additional) {
+                return (
+                  <Sidebar.Collapse
+                    icon={item.icon}
+                    label={item.name}
+                    className="p-2 capitalize hover:text-white hover:bg-primary rounded-lg"
+                    key={item.name}>
+                    {item?.additional?.map((additional) => (
+                      <Sidebar.Item
+                        className={`p-2 capitalize ${
+                          currentPath === additional?.path && 'bg-primary'
+                        } p-2 hover:bg-primary hover:text-white rounded-xl`}
+                        key={additional?.name}
+                        href={additional?.path}>
+                        {additional?.name}
+                      </Sidebar.Item>
+                    ))}
+                  </Sidebar.Collapse>
+                );
+              }
+              return (
+                <Sidebar.Item
+                  className={`p-2 capitalize ${
+                    currentPath === item.path && 'bg-primary text-white'
+                  } hover:bg-primary rounded-lg hover:text-white`}
+                  key={item.name}
+                  icon={item.icon}
+                  href={item.path}>
+                  {item.name}
+                </Sidebar.Item>
+              );
+            })}
+          </Sidebar.ItemGroup>
+        </Sidebar.Items>
+      </Sidebar>
     </aside>
   );
 }

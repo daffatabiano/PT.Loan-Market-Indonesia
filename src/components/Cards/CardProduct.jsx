@@ -38,11 +38,12 @@ export function CardProduct(prop) {
     jaminan,
     target,
     komisi,
+    onClick,
   } = prop;
 
   return (
     <CardWrapper>
-      <div className="flex gap-4 w-full md:justify-between place-items-center  px-2 md:h-48 md:flex-row flex-col">
+      <div className="flex gap-4 w-full md:justify-between place-items-center  px-2 lg:h-48 md:flex-row flex-col">
         <div className="flex flex-col gap-2 justify-center w-1/3 ">
           <img
             src={imagePath[bank]}
@@ -110,6 +111,7 @@ export function CardProduct(prop) {
 
         <button
           type="button"
+          onClick={onClick}
           className="drop-shadow-lg md:w-24 w-full md:h-10 h-14 my-auto text-primary rounded bg-white">
           Detail
         </button>

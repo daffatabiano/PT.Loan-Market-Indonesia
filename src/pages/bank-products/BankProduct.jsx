@@ -7,9 +7,11 @@ import { styles } from '../../utils/helper';
 import { CardProduct } from '../../components/Cards/CardProduct';
 import CardSummaryBank from '../../components/Cards/CardSummaryBank';
 import { TabsProduct } from '../../components/TabsProduct';
+import { useNavigate } from 'react-router-dom';
 
 export default function BankProduct() {
   const [section, setSection] = useState('bank');
+  const navigate = useNavigate();
   const { data, loading, error } = useGet(
     `${import.meta.env.VITE_SERVER_URL}/products`
   );
@@ -35,7 +37,13 @@ export default function BankProduct() {
           <HeaderProductBank />
           <div className="pt-4 flex flex-col gap-4">
             {data.map((item) => (
-              <CardProduct key={item.id} {...item} />
+              <CardProduct
+                key={item.id}
+                {...item}
+                onClick={() => {
+                  navigate(`/bank-product/${item.id}`);
+                }}
+              />
             ))}
           </div>
         </div>

@@ -29,7 +29,7 @@
       "komisi": 1
     },
     {
-      "id": 4,
+      "id": 3,
       "bank": "MNC",
       "produk": "MNC KPR Secondary",
       "rating": 3,
@@ -43,7 +43,7 @@
       "komisi": 1
     },
     {
-      "id": 5,
+      "id": 4,
       "bank": "commonwealth",
       "produk": "KPR Primary",
       "rating": 3,
@@ -127,7 +127,7 @@
       "komisi": 1
     },
     {
-      "id": 9,
+      "id": 10,
       "bank": "CIMB Niaga",
       "produk": "KPR Secondary ",
       "rating": 0,
@@ -141,7 +141,7 @@
       "komisi": 1
     },
     {
-      "id": 9,
+      "id": 11,
       "bank": "CIMB Niaga",
       "produk": "KPR Extra ",
       "rating": 0,

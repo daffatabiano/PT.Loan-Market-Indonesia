@@ -12,12 +12,12 @@ export default function CardSummaryInfo({ text, total }) {
   };
   return (
     <CardWrapper>
-      <div className="flex justify-around place-items-center">
-        <p className="p-2 rounded-full text-2xl bg-primary/20 text-primary">
+      <div className="flex md:flex-row flex-col  justify-around place-items-center">
+        <p className="p-2 rounded-full text-2xl mb-4 md:mb-0 bg-primary/20 text-primary">
           {icons[text]}
         </p>
-        <div className="flex flex-col gap-2 text-center font-bold  ">
-          <p className="text-xl text-black uppercase">{text}</p>
+        <div className="flex flex-col md:gap-2 flex-wrap text-center font-bold  ">
+          <p className="xl:text-xl text-xs  text-black uppercase">{text}</p>
           <p className="text-2xl font-bold text-primary">{total}</p>
         </div>
       </div>

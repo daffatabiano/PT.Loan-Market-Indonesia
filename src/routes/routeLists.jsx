@@ -1,4 +1,4 @@
-import BankProduct from '../pages/BankProduct';
+import BankProduct from '../pages/bank-products/BankProduct';
 import Dashboard from '../pages/Dashboard';
 
 export const routeLists = [

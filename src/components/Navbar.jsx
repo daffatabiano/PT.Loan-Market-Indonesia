@@ -15,7 +15,7 @@ export default function Navbar({ sidebarHandler, title }) {
   return (
     <nav className="w-full">
       <div className="bg-sidebar border-b-2 z-10 md:ps-[22%] ps-4 border-slate-300 sticky top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
-        <h1 className="text-[#4F5051] text-2xl w-fit font-thin flex gap-2 capitalize ">
+        <h1 className="text-[#4F5051] md:text-2xl text-sm w-fit font-thin flex gap-2 capitalize ">
           {' '}
           <button
             onClick={sidebarHandler}
@@ -41,8 +41,8 @@ export default function Navbar({ sidebarHandler, title }) {
               </div>
             }>
             <p className="bg-transparent flex items-center hover:bg-none text-black">
-              <CiBellOn className="text-2xl" />
-              <IoChevronDown className="text-2xl" />
+              <CiBellOn className="md:text-2xl text-lg" />
+              <IoChevronDown className="md:text-2xl text-lg" />
             </p>
           </Popover>
           <hr className="w-[1px] h-10 bg-[#E2F0FF]" />
@@ -58,8 +58,8 @@ export default function Navbar({ sidebarHandler, title }) {
                 </h1>
               </div>
             }>
-            <p className="text-[#646567] text-lg uppercase flex gap-2 items-center">
-              Yohannes affandy <IoChevronDown className="text-2xl" />
+            <p className="text-[#646567] md:text-lg text-[10px] uppercase flex gap-2 items-center">
+              Yohannes affandy <IoChevronDown className="md:text-2xl text-lg" />
             </p>
           </Popover>
 

@@ -3,8 +3,8 @@ import { IoIosSearch } from 'react-icons/io';
 
 const HeaderProductBank = () => {
   return (
-    <div className="w-full flex gap-6 pt-4">
-      <div className="w-2/4 rounded-lg relative bg-white drop-shadow-md border-none">
+    <div className="w-full md:flex md:gap-6 grid grid-cols-2 gap-4  pt-4">
+      <div className="md:w-2/4 w-full rounded-lg relative bg-white drop-shadow-md border-none">
         <input
           type="search"
           placeholder="Cari Berdasarkan nama"
@@ -17,16 +17,16 @@ const HeaderProductBank = () => {
 
       <select
         name="filter"
-        className="p-2 rounded-lg w-1/4 drop-shadow-md border-none focus:outline-none">
+        className="p-2 rounded-lg md:w-1/4 w-full drop-shadow-md border-none focus:outline-none">
         <option value="kredit-pernikahan">Kredit Pernikahan</option>
         <option value="kredit-usaha">Kredit Usaha</option>
       </select>
 
-      <button className="bg-white px-4 py-2 rounded-lg w-1/6 flex items-center drop-shadow-md border-none gap-2">
+      <button className="bg-white px-4 py-2 rounded-lg md:w-1/6 w-full flex items-center drop-shadow-md border-none gap-2">
         <FaSortAlphaDown /> Sort
       </button>
 
-      <button className="text-white bg-primary px-4 py-2 rounded-lg w-2/5 drop-shadow-md border-none">
+      <button className="text-white text-sm md:text-lg bg-primary px-4 py-2 rounded-lg w-full md:w-2/5 drop-shadow-md border-none">
         + Tambahkan Product
       </button>
     </div>

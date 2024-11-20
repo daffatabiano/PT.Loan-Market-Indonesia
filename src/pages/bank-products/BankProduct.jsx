@@ -20,7 +20,7 @@ export default function BankProduct() {
 
   return (
     <DashboardLayout>
-      <div className="w-full md:ps-[22%] h-16 bg-white flex justify-center">
+      <div className={styles.headers_additional}>
         <TabsProduct setSection={setSection} section={section} />
       </div>
       {section === 'bank' ? (

@@ -7,7 +7,7 @@ export default function SidebarCustom() {
   const currentPath = useLocation().pathname;
 
   return (
-    <aside className="h-screen fixed z-50 bg-sidebar w-1/5 flex flex-col border-e-4 border-slate-500">
+    <aside className="h-screen fixed z-50 bg-sidebar w-1/5 flex flex-col border-e-4 border-[#d9d9d9]">
       <img src={CompanyLogo} alt="company-logo" className="w-24 h-24 mx-auto" />
       <Sidebar aria-label="Sidebar with multi-level dropdown example">
         <Sidebar.Items>

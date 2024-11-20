@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full">
-      <div className="bg-sidebar border-b-2 ps-[22%] border-slate-800 sticky top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
+      <div className="bg-sidebar border-b-2 z-10 ps-[22%] border-slate-300 sticky top-0 left-0 right-0 w-full p-4 h-20 flex justify-between items-center shadow-md">
         <h1 className="text-[#4F5051] text-2xl w-fit font-thin ">Dashboard</h1>
         <div className="flex items-center gap-2">
           <hr className="w-[1px] h-10 bg-[#E2F0FF]" />

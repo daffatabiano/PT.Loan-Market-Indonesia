@@ -1,13 +1,10 @@
 import CardWrapper from '../components/Cards/CardWrapper';
 import DashboardLayout from '../layouts/DashboardLayout';
 import { cardSummaryData } from '../datas/card-summary.data';
-import { MdOutlineContactMail, MdOutlineShoppingBag } from 'react-icons/md';
-import { CiBank } from 'react-icons/ci';
-import { LuStickyNote } from 'react-icons/lu';
 import { FaRegEdit } from 'react-icons/fa';
-import { Chart as ChartJS, ArcElement } from 'chart.js';
-ChartJS.register(ArcElement);
-import { Doughnut } from 'react-chartjs-2';
+import CardSummaryInfo from '../components/Cards/CardSummaryInfo';
+import BarChart from '../components/Charts/BankChart';
+import CircularProgressBar from '../components/Charts/CircularProgressBar';
 
 export default function Dashboard() {
   return (
@@ -53,62 +50,16 @@ export default function Dashboard() {
             </div>
           </div>
         </CardWrapper>
+        <CardWrapper>
+          <h1 className="text-2xl font-bold text-center pb-16 pt-4">
+            Top 5 Bank Approval Tinggi
+          </h1>
+
+          <div className="w-full flex justify-center items-center place-items-center">
+            <BarChart />
+          </div>
+        </CardWrapper>
       </div>
     </DashboardLayout>
   );
 }
-
-function CardSummaryInfo({ text, total }) {
-  const icons = {
-    contact: <MdOutlineContactMail />,
-    loan: <LuStickyNote />,
-    product: <MdOutlineShoppingBag />,
-    bank: <CiBank />,
-  };
-  return (
-    <CardWrapper>
-      <div className="flex justify-around place-items-center">
-        <p className="p-2 rounded-full text-2xl bg-primary/20 text-primary">
-          {icons[text]}
-        </p>
-        <div className="flex flex-col gap-2 text-center font-bold  ">
-          <p className="text-xl text-black uppercase">{text}</p>
-          <p className="text-2xl font-bold text-primary">{total}</p>
-        </div>
-      </div>
-    </CardWrapper>
-  );
-}
-
-const CircularProgressBar = ({ subtitle, percentage }) => {
-  const data = {
-    datasets: [
-      {
-        data: [percentage, 280 - percentage],
-        backgroundColor: ['#007bff', '#e0e0e0'],
-        borderWidth: 0,
-      },
-    ],
-  };
-
-  const options = {
-    cutout: '80%',
-    rotation: 0,
-    circumference: 360,
-    plugins: {
-      tooltip: { enabled: true },
-    },
-  };
-
-  return (
-    <div className="text-center relative flex flex-col place-items-center">
-      <div className="relative w-[200px]">
-        <Doughnut data={data} options={options} />
-        <h1 className="absolute text-2xl font-bold top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {percentage}%
-        </h1>
-      </div>
-      <h1 className="font pt-4 text-[#4F5051] w-full">{subtitle}</h1>
-    </div>
-  );
-};

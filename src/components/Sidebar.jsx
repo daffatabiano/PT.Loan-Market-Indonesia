@@ -20,7 +20,11 @@ export default function SidebarCustom({ open, setOpen }) {
           <FaChevronLeft />
         </button>
       )}
-      <img src={CompanyLogo} alt="company-logo" className="w-24 h-24 mx-auto" />
+      <img
+        src={CompanyLogo}
+        alt="company-logo"
+        className="w-24 h-24 mx-auto md:mb-4"
+      />
       <Sidebar
         className="h-full w-full"
         aria-label="Sidebar with multi-level dropdown example">

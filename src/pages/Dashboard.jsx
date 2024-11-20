@@ -10,7 +10,7 @@ import TimelineComponent from '../components/Timelines/TimelineComponent';
 export default function Dashboard() {
   return (
     <DashboardLayout>
-      <div className="flex gap-4 flex-col md:flex-row xl:gap-8 pe-4">
+      <div className="flex gap-4 md:ps-[22%] ps-4 pt-8 flex-col md:flex-row xl:gap-8 pe-4">
         <div className=" flex flex-col gap-8">
           <div className="grid grid-cols-4 gap-4">
             {cardSummaryData.map((item) => (

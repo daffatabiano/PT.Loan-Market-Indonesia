@@ -14,7 +14,7 @@ export default function DashboardLayout(prop) {
     <>
       <SidebarCustom open={open} setOpen={() => setOpen((curr) => !curr)} />
       <Navbar title={title} sidebarHandler={() => setOpen((curr) => !curr)} />
-      <div className="md:ps-[22%] ps-4 pt-8 w-full h-full">{children}</div>
+      <div className="w-full h-full">{children}</div>
     </>
   );
 }

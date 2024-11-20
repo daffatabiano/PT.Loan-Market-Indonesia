@@ -5,10 +5,12 @@ import { CiBellOn, CiMail } from 'react-icons/ci';
 import { IoChevronDown, IoChevronForward } from 'react-icons/io5';
 import { ProfilePicture } from '../assets';
 import { FiPhone } from 'react-icons/fi';
+import { useLocation } from 'react-router-dom';
 
 export default function Navbar({ sidebarHandler, title }) {
   const [bellOpen, setBellOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const currentPath = useLocation().pathname;
 
   return (
     <nav className="w-full">
@@ -64,7 +66,7 @@ export default function Navbar({ sidebarHandler, title }) {
           <hr className="w-[1px] h-10 bg-[#E2F0FF]" />
         </div>
       </div>
-      <Header />
+      {currentPath === '/dashboard' && <Header />}
     </nav>
   );
 }

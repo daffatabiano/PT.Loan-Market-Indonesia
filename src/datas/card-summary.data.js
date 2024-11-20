@@ -16,3 +16,17 @@ export const cardSummaryData = [
     total: '30',
   },
 ];
+
+export const cardSummaryBank = [
+  {
+    name: 'KPR dan Multiguna',
+    icon: 'kpr',
+  },
+  {
+    name: 'Refinancing ',
+    icon: 'refinancing',
+  },
+  { name: 'Kredit Modal Usaha dan Investasi', icon: 'kmu' },
+  { name: 'Deposito', icon: 'deposito' },
+  { name: 'Take Over dan Bridging Loan', icon: 'takeover' },
+];

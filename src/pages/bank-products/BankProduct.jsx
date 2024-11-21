@@ -8,13 +8,16 @@ import { CardProduct } from '../../components/Cards/CardProduct';
 import CardSummaryBank from '../../components/Cards/CardSummaryBank';
 import { TabsProduct } from '../../components/TabsProduct';
 import { useNavigate } from 'react-router-dom';
+import { mockApi } from '../../datas/mockApi';
 
 export default function BankProduct() {
   const [section, setSection] = useState('bank');
   const navigate = useNavigate();
-  const { data, loading, error } = useGet(
-    `${import.meta.env.VITE_SERVER_URL}/products`
-  );
+  // const { data, loading, error } = useGet(
+  //   `${import.meta.env.VITE_SERVER_URL}/products`
+  // );
+
+  const data = mockApi;
 
   console.log(data);
 

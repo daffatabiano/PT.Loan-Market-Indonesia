@@ -4,4 +4,7 @@ export const styles = {
   headers_additional: 'w-full md:ps-[22%] h-16 bg-white flex justify-center',
   input_edit:
     'p-2 w-full rounded bg-slate-200 focus:outline-none border-slate-300',
+  button_back_rounded:
+    'sm:text-3xl text-xl text-white bg-primary rounded-full p-2',
+  checkbox: 'mr-2 p-2 checked:bg-primary rounded',
 };

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.step-item {
+  @apply relative flex flex-col justify-center items-center w-full;
+}
+.step-item:not(:first-child):before {
+  @apply content-[''] bg-slate-200 absolute w-full h-[6px] right-2/4 top-[30%] -translate-y-2/4;
+}
+.step {
+  @apply w-5 h-5 flex items-center justify-center z-10 relative bg-slate-700 rounded-full font-semibold text-white;
+}
+.active .step {
+  @apply bg-sky-600;
+}
+.complete .step {
+  @apply bg-[#005274];
+}
+.complete p {
+  @apply text-white;
+}
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  @apply bg-[#005274];
+}

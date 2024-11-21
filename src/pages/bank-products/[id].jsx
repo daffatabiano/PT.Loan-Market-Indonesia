@@ -17,7 +17,7 @@ export default function BankProductDetail() {
           <button
             onClick={() => navigate(-1)}
             type="button"
-            className="sm:text-3xl text-xl text-white bg-primary rounded-full p-2">
+            className={styles.button_back_rounded}>
             <FaArrowLeft />
           </button>
           <p className="md:text-2xl">Bank Product Detail</p>

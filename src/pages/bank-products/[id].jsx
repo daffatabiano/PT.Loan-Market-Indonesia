@@ -44,21 +44,37 @@ export default function BankProductDetail() {
       <div className={styles.container_dashboard}>
         <CardWrapper>
           <div className="flex flex-col gap-4">
-            <InputField label="Bank" type="text" />
-            <InputField label="Nama Product" type="text" />
-            <InputField label="Jaminan" type="text" />
-            <InputField label="Target Market" type="text" />
-            <InputField label="Komisi" type="text" />
-            <InputField label="Appraisal" type="text" />
-            <InputField label="Floating" type="text" />
-            <InputField label="Loan to Value" type="text" />
-            <InputField label="Penalty Fee" type="text" />
-            <InputField label="Interest Rate" type="text" />
-            <InputField label="Fix Rate %" type="text" />
-            <InputField label="Fix Rate (year)" type="text" />
-            <InputField label="Max Tenor (year)" type="text" />
-            <InputField label="Keterangan" type="text" />
-            <InputField label="URL" type="text" />
+            <InputField label="Bank" type="text" value="Mandiri" />
+            <InputField
+              label="Nama Product"
+              type="text"
+              value="Bunga Special Tengah Imlek"
+            />
+            <InputField
+              label="Jaminan"
+              type="text"
+              value="Ruko, Rukan, Rumah, Apartemen"
+            />
+            <InputField
+              label="Target Market"
+              type="text"
+              value="Karyawan, Pengusaha"
+            />
+            <InputField label="Komisi" type="text" value="1" />
+            <InputField label="Appraisal" type="text" value="1" />
+            <InputField label="Floating" type="text" value="1" />
+            <InputField label="Loan to Value" type="text" value="1" />
+            <InputField label="Penalty Fee" type="text" value="-" />
+            <InputField label="Interest Rate" type="text" value="3.65%" />
+            <InputField label="Fix Rate %" type="text" value="3.68%" />
+            <InputField label="Fix Rate (year)" type="text" value="3" />
+            <InputField label="Max Tenor (year)" type="text" value="12" />
+            <InputField
+              label="Keterangan"
+              type="text"
+              value="Mandiri KPR adalah kredit pemilikan rumah (KPR) bank mandiri yang diberikan secara perseorangan untuk membeli rumah tinggal/apartemen/ruko/rukan, baik melalui developer atau tidak."
+            />
+            <InputField label="URL" type="text" value="null" />
           </div>
         </CardWrapper>
       </div>
@@ -67,7 +83,7 @@ export default function BankProductDetail() {
 }
 
 function InputField(prop) {
-  const { label, type, ...rest } = prop;
+  const { label, type, value, ...rest } = prop;
   return (
     <div className="flex items-center gap-2">
       <label htmlFor="" className="w-48 font-bold">
@@ -76,8 +92,11 @@ function InputField(prop) {
       <input
         disabled
         type={type}
+        value={value}
         {...rest}
-        className="w-full p-2 rounded-lg bg-[#c1c1c1]/50 text-white placeholder:text-white focus:outline-none border-none"
+        className={`w-full p-2 rounded-lg bg-[#c1c1c1]/50 placeholder:text-white focus:outline-none border-none ${
+          value === 'null' ? 'text-primary' : 'text-black'
+        }`}
       />
     </div>
   );

@@ -34,24 +34,13 @@ const Stepper = ({ currentStep, setCurrentStep, complete, setComplete }) => {
               }}
               className="step relative mb-10">
               {i + 1 < currentStep || complete ? <GrShareRounded /> : ''}
-              <p className="text-gray-500 text-[10px] w-full h-full text-center flex justify-center items-start absolute bottom-[-25px]">
+              <p className="md:flex text-gray-500 text-[10px] w-full h-full text-center hidden justify-center items-start absolute bottom-[-25px]">
                 {step}
               </p>
             </div>
           </div>
         ))}
       </div>
-      {/* {!complete && (
-        <button
-          className="btn"
-          onClick={() => {
-            currentStep === steps.length
-              ? setComplete(true)
-              : setCurrentStep((prev) => prev + 1);
-          }}>
-          {currentStep === steps.length ? 'Finish' : 'Next'}
-        </button>
-      )} */}
     </>
   );
 };

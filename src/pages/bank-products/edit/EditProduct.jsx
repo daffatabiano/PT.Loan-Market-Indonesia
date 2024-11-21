@@ -168,7 +168,7 @@ function CheckboxList({ checkItemsProps = {} }) {
             name={item}
             checked={checkedItems[item]}
             onChange={handleCheckboxChange}
-            className="mr-2 p-2 checked:bg-primary rounded"
+            className={styles.checkbox}
           />
           <label htmlFor={item} className="capitalize">
             {item.replace(/([A-Z])/g, ' $1').toLowerCase()}
@@ -183,7 +183,7 @@ function DateRangePicker() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   return (
-    <div className="flex items-center space-x-2 bg-slate-200 border border-slate-300 rounded-lg">
+    <div className="flex items-center sm:space-x-2 space-x-0 sm:text-md text-sm flex-wrap bg-slate-200 border border-slate-300 rounded-lg">
       <input
         type="date"
         value={startDate}

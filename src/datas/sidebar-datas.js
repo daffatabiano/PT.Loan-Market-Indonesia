@@ -26,6 +26,10 @@ export const sidebarItems = [
         name: 'category product',
         path: '/category-product',
       },
+      {
+        name: 'edit application',
+        path: '/edit-application',
+      },
     ],
   },
   { name: 'bank', path: '/bank', icon: CiBank },

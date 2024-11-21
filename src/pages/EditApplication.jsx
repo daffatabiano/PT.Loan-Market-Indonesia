@@ -80,7 +80,7 @@ function FormApplicatioWrapper({
     <div className="w-full h-full ">
       <div className="border-[1px] border-slate-300">
         <h1 className="py-2 px-4 bg-[#005274] text-white">{title}</h1>
-        <div className="flex gap-4 p-4">{children}</div>
+        <div className="flex gap-4 p-4 md:flex-row flex-col">{children}</div>
       </div>
 
       <div className="flex justify-between pt-4">
@@ -97,7 +97,7 @@ function FormApplicatioWrapper({
 
         <button
           type="button"
-          className={`rounded uppercase text-white py-2 px-4  ${
+          className={`rounded uppercase text-white py-2 md:px-4 px-2  ${
             textButton === 'UPDATE' ? 'bg-[#005274]' : 'bg-[#FF0000]'
           }`}>
           {textButton}
